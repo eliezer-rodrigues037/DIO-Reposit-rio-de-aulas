@@ -1,6 +1,6 @@
 git clone <link do repositório remoto> --Clona pra o diretório atual um repositório remoto.
 git status --Exibe o status to repositório local.
 git add --Adiciona arquivos a serem comitados no repositório local.
-git commit -m <menssagem de commit> --Comita as modificações no repositório local com uma messagem.
+git commit -m "menssagem de commit" --Comita as modificações no repositório local com uma messagem.
 git push -- Envia as modificações para o repositório remoto.
 git pull -- Sincroniza modificações do repositório remoto com o local.
