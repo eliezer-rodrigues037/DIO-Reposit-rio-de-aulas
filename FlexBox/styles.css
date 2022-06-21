@@ -1,0 +1,300 @@
+html {
+    font-family: Arial;
+}
+
+h2 {
+    margin: 10px;
+}
+
+/* ------------------Display Flex------------------*/
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #b3b3b3;
+    background-color: #282828;
+    max-width: 500px;
+    height: 200px;
+    display: flex; /* Transforma cada item filho do container em flex containers*/
+}
+
+.container-item {
+    background-color: lightblue;
+    margin: 5px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* ------------------Flex Direction------------------*/
+
+.flex-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    max-width: 300px;
+}
+
+.flex-item {
+    background-color: rgb(103, 103, 238);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+.row {
+    flex-direction: row; /* Alinhamento em linha (Padrão). */
+}
+.row-reverse {
+    flex-direction: row-reverse; /* Alinhamento em linha, ordem dos items reversa. */
+}
+.row-reverse li {
+    background-color: red;
+}
+
+.column {
+    flex-direction: column; /* Alinhamento em coluna. */
+    /* float: left; */
+}
+
+.column li {
+    background-color: orange;
+}
+
+.column-reverse {
+    float: right;
+    flex-direction: column-reverse; /* Alinhamento em coluna, ordem dos items reversa. */
+}
+
+/* ------------------Flex Wrap------------------*/
+
+.flex-wrapContainer {
+    flex-direction: column;
+    height: 300px;
+    max-width: 310px;
+}
+
+.flex-wrap-item {
+    font-size: 24px;
+    height: 33.33%;
+    text-align: center;
+    line-height: 50px;
+    min-width: 100px;
+}
+
+.no-wrap {
+    flex-wrap: nowrap; /* Items utrapassam a tela quando maior que o container (Padrão). */
+}
+
+.wrap {
+    flex-wrap: wrap; /* Caso o item do container va alem do tamanho do container, ele dobra o elemento para uma proxima linha*/
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse; /* Igual ao flex-wrap, porem dobra para a linha acima.*/
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.orange {
+    background-color: orange;
+}
+
+/*------------------Flex Flow------------------ */
+
+.flexFlow-container {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: #21212f;
+    max-width: 500px;
+    min-height: 400px;
+    display: flex;
+    border-radius: 2%;
+}
+
+.flexFlow-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    margin: 5px;
+    text-align: center;
+    min-width: 100px;
+    height: 70px;
+    line-height: 50px;
+    color: white;
+    border-radius: 3%;
+}
+
+.default {
+    flex-flow: row nowrap; /* Nenhum comportamenteo diferente do padrão é aplicado */
+}
+
+.wrap {
+    flex-flow: wrap;
+}
+
+.wrap-reverse {
+    flex-flow: row wrap-reverse;
+}
+
+.r-nowrap {
+    flex-flow: row-reverse nowrap;
+}
+
+.r-wrap {
+    flex-flow: row-reverse wrap;
+}
+
+.rr-wrap {
+    flex-flow: row-reverse wrap-reverse;
+}
+
+.exemplos {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*------------------Justify Content------------------*/
+
+.C-JustifyContent {
+    flex-direction: column;
+    height: fit-content;
+    min-height: 400px;
+}
+
+.CI-JustifyContent {
+    width: fit-content;
+    height: fit-content;
+}
+
+.flex-start {
+    justify-content: flex-start; /*Comportamento padrão.*/
+}
+
+.flex-end {
+    justify-content: flex-end; /*Organiza os items ao final do container.*/
+}
+
+.center {
+    justify-content: center; /*Organiza os items no centro do container.*/
+}
+
+.space-between {
+    justify-content: space-between; /*Organiza os items do container adicionando um espaço uniforme entre cada item.*/
+}
+
+.space-around {
+    justify-content: space-around; /*Organiza os items do container adicionado um espaço uniforme em volta dos items.*/
+}
+
+/* ------------------Align Items ------------------*/
+
+.C-AlignItems {
+    height: 200px;
+    width: 600px;
+    background-color: #21212f;
+    display: flex;
+}
+
+.CI-AlignItems {
+    background-color: purple;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    flex: 1;
+    /* height: 20px;
+    width: 20px; */
+}
+
+.flex {
+    flex: 1;
+}
+
+.center {
+    align-items: center; /*Alinha os itens ao centro do eixo.*/
+}
+
+.stretch {
+    align-items: stretch; /*Alinha os itens ao eixo do maior elemento do container, e esticando ao tamanho do mesmo.*/
+}
+
+.flex-start {
+    align-items: flex-start; /*Alinha os itens ao topo do exixo do container*/
+}
+
+.flex-end {
+    align-items: flex-end; /*Alinha os itens a base do eixo do contaienr.*/
+}
+
+.baseline {
+    align-items: baseline; /*Alinha os itens estabelecendo um limite, de acordo com a base da linha do texto.*/
+}
+
+.justify {
+    height: 300px;
+    margin: 5px;
+    justify-content: center;
+}
+
+.justify .CI-AlignItems {
+    flex: 0;
+    padding: 20px;
+}
+
+/*------------------Align Content------------------*/
+
+.C-AlignContent {
+    height: 400px;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21212f;
+}
+
+.CI-AlignContent {
+    background-color: red;
+    margin: 5px;
+    padding: 0 5px;
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.AC-stretch {
+    align-content: stretch;
+}
+
+.AC-Center {
+    align-content: center;
+}
+
+.AC-FlexStart {
+    align-content: flex-start;
+}
+
+.AC-FlexEnd {
+    align-content: flex-end;
+}
+
+.AC-SpaceAround {
+    align-content: space-around;
+}
+
+.AC-SpaceBetween {
+    align-content: space-between;
+}
