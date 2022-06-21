@@ -1,3 +1,7 @@
+/*Estruturação do CSS não está boa, tem muita repetição de classe,
+ mas o intúito aqui é montar exemplos didáticos,
+ portanto é mais prático fazer desta forma.*/
+
 html {
     font-family: Arial;
 }
@@ -256,7 +260,17 @@ h2 {
 }
 
 /*------------------Align Content------------------*/
-
+/*Funciona de forma similar ao justify content, porem ele alinha os items
+ao eixo que cruza o eixo principal, ou 'cross axis'. 
+Esses eixos se organizam da seguinte forma: 
+    Se o display-flex estiver como row, o exio principal é a linha, 
+    que atravessa o container;
+    Se o display-flex estiver como column, o eixo principal é a linha que
+    atravessa a coluna do container;
+Desta forma, o eixo principal muda, de acordo como a forma de organização dos
+items flex.
+REF: https://pixl.is/image/eixos-flexboxpng.GRNNNN.
+*/
 .C-AlignContent {
     height: 400px;
     max-width: 300px;
@@ -297,4 +311,36 @@ h2 {
 
 .AC-SpaceBetween {
     align-content: space-between;
+}
+
+/*------------------Flex Grow------------------*/
+
+.fg-Container {
+    display: flex;
+    background-color: #21212f;
+    max-width: 300px;
+}
+
+.fg-item {
+    background-color: purple;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+.fg-0 {
+    flex-grow: 0;
+}
+
+.fg-1 {
+    flex-grow: 1;
+}
+
+.fg-2 {
+    flex-grow: 3;
+}
+
+.fg-3 {
+    flex-grow: 3;
 }
