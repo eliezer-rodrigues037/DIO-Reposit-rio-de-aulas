@@ -344,3 +344,69 @@ REF: https://pixl.is/image/eixos-flexboxpng.GRNNNN.
 .fg-3 {
     flex-grow: 3;
 }
+
+/*------------------Flex Basis------------------*/
+/* Controla o quanto de espaço cala item vai ter antes de distribuir
+os items, para que possão ter porporções iguais*/
+.fb-container {
+    display: flex;
+    background-color: #21212f;
+    max-width: 500px;
+}
+
+.fb-item {
+    background-color: purple;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+.fb-auto {
+    flex-basis: auto;
+}
+
+.fb-zero {
+    flex-basis: 0;
+}
+
+.fb-w100 {
+    flex-basis: 100px; /*Tamanho mínimo de largura de 100px*/
+}
+
+/*------------------Flex Shrink------------------*/
+
+.fs-container {
+    background-color: #21212f;
+    display: flex;
+    max-width: 350px;
+}
+
+.fs-item {
+    background-color: purple;
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+    /* flex: 1; */
+}
+
+/*Não permite que o item reduza seu tamanho minimo*/
+.fs-0 {
+    flex-shrink: 0;
+    flex-basis: 100px;
+}
+
+/*Comportamento padrão, reduiz o damanho do item proporcialmente ao
+tamanh do container.*/
+.fs-1 {
+    flex-shrink: 1;
+}
+
+.fs-2 {
+    flex-shrink: 2;
+    flex-basis: 200px;
+}
+
+.fs-3 {
+    flex-shrink: 3;
+}

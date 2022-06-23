@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex shrink</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h2>flex-shrink: 1</h2>
+        <div class="fs-container">
+           <div class="fs-item fs-1 fg-1">A</div>
+           <div class="fs-item fs-1 fg-1">B</div>
+           <div class="fs-item fs-1 fg-1">C</div>
+           <div class="fs-item fs-1 fg-1">D</div>
+           <div class="fs-item fs-1 fg-1">E</div>
+        </div>
+
+        <div class="fs-container">
+           <div class="fs-item fs-1 fg-1">A</div>
+           <div class="fs-item fs-1 fg-1">Lorem ipsum amet,</div>
+           <div class="fs-item fs-1 fg-1">C dolor sit</div>
+           <div class="fs-item fs-1 fg-1">D</div>
+        </div>
+        <h2>flex-shrink: 0, basis: 100px</h2>
+        <div class="fs-container">
+            <div class="fs-item fs-0 fg-1">A</div>
+            <div class="fs-item fs-0 fg-1">Lorem ipsum ,</div>
+            <div class="fs-item fs-0 fg-1">C dolor sit amet</div>
+            <div class="fs-item fs-0 fg-1">D</div>
+         </div>
+
+         <h2>flex-shrink: 1 2 2 3, basis: 100px</h2>
+        <div class="fs-container">
+            <div class="fs-item fs-1 fg-1">A</div>
+            <div class="fs-item fs-2 fg-1">Lorem ipsum ,</div>
+            <div class="fs-item fs-2 fg-1">C dolor sit amet</div>
+            <div class="fs-item fs-3 fg-1">D</div>
+         </div>
+</html>
