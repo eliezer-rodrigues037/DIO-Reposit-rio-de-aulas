@@ -10,6 +10,10 @@ h2 {
     margin: 10px;
 }
 
+body {
+    margin: 0;
+}
+
 /* ------------------Display Flex------------------*/
 
 .container {
@@ -116,7 +120,7 @@ h2 {
     background-color: orange;
 }
 
-/*------------------Flex Flow------------------ */
+/*------------------ Flex Flow ------------------ */
 
 .flexFlow-container {
     margin: 10px;
@@ -172,7 +176,7 @@ h2 {
     flex-flow: row wrap;
 }
 
-/*------------------Justify Content------------------*/
+/*------------------ Justify Content ------------------*/
 
 .C-JustifyContent {
     flex-direction: column;
@@ -205,8 +209,8 @@ h2 {
     justify-content: space-around; /*Organiza os items do container adicionado um espaço uniforme em volta dos items.*/
 }
 
-/* ------------------Align Items ------------------*/
-
+/* ------------------ Align Items ------------------*/
+/*Alinha os items ao eixo secundário.*/
 .C-AlignItems {
     height: 200px;
     width: 600px;
@@ -229,7 +233,7 @@ h2 {
 }
 
 .center {
-    align-items: center; /*Alinha os itens ao centro do eixo.*/
+    align-items: center; /*Alinha os itens ao centro do eixo vertical.*/
 }
 
 .stretch {
@@ -259,7 +263,7 @@ h2 {
     padding: 20px;
 }
 
-/*------------------Align Content------------------*/
+/*------------------ Align Content ------------------*/
 /*Funciona de forma similar ao justify content, porem ele alinha os items
 ao eixo que cruza o eixo principal, ou 'cross axis'. 
 Esses eixos se organizam da seguinte forma: 
@@ -313,8 +317,8 @@ REF: https://pixl.is/image/eixos-flexboxpng.GRNNNN.
     align-content: space-between;
 }
 
-/*------------------Flex Grow------------------*/
-
+/*------------------ Flex Grow ------------------*/
+/*Controla a proporção com que o item ira aumentar quando houver espaço sobrando.*/
 .fg-Container {
     display: flex;
     background-color: #21212f;
@@ -345,9 +349,8 @@ REF: https://pixl.is/image/eixos-flexboxpng.GRNNNN.
     flex-grow: 3;
 }
 
-/*------------------Flex Basis------------------*/
-/* Controla o quanto de espaço cala item vai ter antes de distribuir
-os items, para que possão ter porporções iguais*/
+/*------------------ Flex Basis ------------------*/
+/* Controla o tamanho base, quando tem espaço suficiente, o elemento vai ter, antes de reduzir ou aumentar.*/
 .fb-container {
     display: flex;
     background-color: #21212f;
@@ -374,8 +377,8 @@ os items, para que possão ter porporções iguais*/
     flex-basis: 100px; /*Tamanho mínimo de largura de 100px*/
 }
 
-/*------------------Flex Shrink------------------*/
-
+/*------------------ Flex Shrink ------------------*/
+/*Controla com qual proporção, quando não tem espaço suficiente, o itens iram reduzir de tamanho.*/
 .fs-container {
     background-color: #21212f;
     display: flex;
@@ -404,9 +407,136 @@ tamanh do container.*/
 
 .fs-2 {
     flex-shrink: 2;
-    flex-basis: 200px;
 }
 
 .fs-3 {
     flex-shrink: 3;
+}
+
+/*------------------ Flex ------------------*/
+.f-container {
+    display: flex;
+    color: white;
+    background-color: #21212f;
+    max-width: 400px;
+}
+
+.f-item {
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
+}
+
+.f-1 {
+    flex: 1; /*Grow = 1, shrink = 1, basis = 0; */
+}
+
+.f-2 {
+    flex: 2;
+}
+
+.f-3 {
+    flex: 3; /*Grow = 3, shrink = 1, basis = 0; */
+}
+
+/*------------------ Order ------------------*/
+
+.o-container {
+    display: flex;
+    color: white;
+    background-color: #21212f;
+    max-width: 400px;
+}
+
+.o-item {
+    flex: 1;
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
+}
+
+.o1 {
+    order: 1;
+}
+
+.o2 {
+    order: 3;
+}
+
+.o3 {
+    order: 3;
+}
+
+.o4 {
+    order: 4;
+}
+
+.o-1 {
+    order: -1;
+}
+
+.o-2 {
+    order: -3;
+}
+
+.o-3 {
+    order: -3;
+}
+
+.o-4 {
+    order: -4;
+}
+
+.o-5 {
+    order: -5;
+}
+
+/*------------------ Align Self ------------------*/
+/*Controla o alinhamento do item, no eixo secundário.*/
+.as-container {
+    display: flex;
+    color: white;
+    background-color: #21212f;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.as-item {
+    flex: 1;
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
+}
+
+.as-center {
+    align-self: center;
+}
+
+.as-start {
+    align-self: start;
+}
+
+.as-end {
+    align-self: end;
+}
+
+.as-baseline {
+    align-self: baseline;
+}
+
+.as-streatch {
+    align-self: stretch;
+}
+
+.as-auto {
+    align-self: auto;
 }
